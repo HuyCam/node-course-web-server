@@ -32,7 +32,7 @@ hbs.registerHelper('screamIt', (text) => {
     return text.toUpperCase();
 })
 
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
     res.render('home.hbs', {
         pageTitle: 'Home',
         welcomeMessage: 'Welcome to my town',
