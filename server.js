@@ -40,7 +40,11 @@ app.get('/', (req, res) => {
           return name;
       }
     })
-  });
+});
+
+app.get('/portfolio', (req, res) => {
+    res.render('portfolio.hbs');
+})
 
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
