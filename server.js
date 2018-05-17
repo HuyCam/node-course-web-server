@@ -3,6 +3,7 @@ const fs = require('fs');
 const hbs = require('hbs');
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 hbs.registerPartials(__dirname + '/views/partials');
 
@@ -21,10 +22,6 @@ app.use((req, res, next) => {
         }
     })
     next();
-});
-
-app.use((req, res) => {
-    res.render('maintenance.hbs');
 });
 
 hbs.registerHelper('getCurrentYear', () => {
@@ -61,10 +58,10 @@ app.get('/bad', (req, res) => {
     });
 })
 
-app.listen(3000,(error, good) => {
+app.listen(port ,(error, good) => {
     if (error) {
         console.log(error);
     } else {
-        console.log('App is running at the port 3000');
+        console.log('App is running at the port ' + port);
     }
 });
