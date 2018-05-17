@@ -1,0 +1,8 @@
+{
+    "name": "Huy",
+    "age": 22,
+    "hobbies": {
+        "Reading": ["Margazine", "Book"],
+        "Coding": ["react", "nodejs"]
+    }
+}
